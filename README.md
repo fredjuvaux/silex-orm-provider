@@ -22,7 +22,13 @@ You basically have three options to add this extension to your Silex project. We
 ### composer.json
 http://packagist.org/packages/fredjuvaux/silex-orm-provider
 
-Add 'fredjuvaux/silex-orm-provider' to the dependencies in your projects composer.json file and update your dependencies.
+Add to the dependencies in your projects composer.json file:
+"fredjuvaux/doctrine-orm-provider": "1.0.*@dev"
+
+And update your dependencies:
+php composer.phar update
+
+
 This is by far the easiest way, since it automatically adds the Doctrine dependencies and adds everything to the autoloading mechanism supplied by Composer.
 
 More information on Composer can be found on [getcomposer.org](http://getcomposer.org/).
@@ -61,13 +67,13 @@ Registering the Doctrine ORM Service Provider is rather straight forward:
 $app['autoloader']->registerNamespace('SilexORM', __DIR__ . '/vendor/silex-orm-extension/lib');
 
 $app->register(new SilexORM\Provider\DoctrineORMServiceProvider(), array(
-    'db.orm.class_path'            => __DIR__.'/vendor/doctrine/lib',
-    'db.orm.proxies_dir'           => __DIR__.'/var/cache/doctrine/Proxy',
+    'db.orm.class_path'            => __DIR__.'/../vendor/doctrine/orm/lib',
+    'db.orm.proxies_dir'           => __DIR__.'/../var/cache/doctrine/Proxy',
     'db.orm.proxies_namespace'     => 'DoctrineProxy',
     'db.orm.auto_generate_proxies' => true,
     'db.orm.entities'              => array(array(
         'type'      => 'annotation',
-        'path'      => __DIR__.'/app',
+        'path'      => __DIR__.'/Entity',
         'namespace' => 'Entity',
     )),
 ));

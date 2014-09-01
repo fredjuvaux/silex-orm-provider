@@ -23,11 +23,16 @@ You basically have three options to add this extension to your Silex project. We
 http://packagist.org/packages/fredjuvaux/silex-orm-provider
 
 Add to the dependencies in your projects composer.json file:
+
+```bash
 "fredjuvaux/doctrine-orm-provider": "1.0.*@dev"
+```
 
 And update your dependencies:
-php composer.phar update
 
+```bash
+php composer.phar update
+```
 
 This is by far the easiest way, since it automatically adds the Doctrine dependencies and adds everything to the autoloading mechanism supplied by Composer.
 

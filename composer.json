@@ -2,7 +2,8 @@
     "name": "fredjuvaux/doctrine-orm-provider",
     "description": "Doctrine ORM provider for Silex",
     "keywords": ["silex", "doctrine", "orm", "database", "extension", "provider"],
-    "homepage": "https://github.com/mjakubowski/nutwerk-orm-extension",
+    "license": "MIT",
+    "homepage": "https://github.com/fredjuvaux/doctrine-orm-provider",
     "authors": [
         { 
             "name": "Fred Juvaux",
@@ -20,7 +21,9 @@
         "symfony/console": "Necessary if you would like to use the Doctrine CLI tools"
     },
     "autoload": {
-        "psr-0": { "SilexORM\\Provider": "lib/" }
+        "psr-0": { 
+            "SilexORM\\Provider": "lib/"
+        }
     },
     "extra": {
         "branch-alias": {

@@ -1,5 +1,5 @@
 <?php
-namespace SilexORM\Provider;
+namespace ORM\Provider;
 
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Configuration as DBALConfiguration;

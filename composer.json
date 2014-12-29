@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-0": { 
-            "ORM\\Provider": "lib/"
+            "ORM\\Provider": "src/"
         }
     },
     "extra": {
